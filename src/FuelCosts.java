@@ -11,68 +11,56 @@ public class FuelCosts {
         boolean done = false;
 
         // get gallons
-        do
-        {
+        do {
             System.out.print("Enter gallons of gas in tank: ");
 
-            if (in.hasNextDouble())
-            {
+            if (in.hasNextDouble()) {
                 gallons = in.nextDouble();
                 in.nextLine(); // clear the buffer
                 done = true;
-            }
-            else
-            {
+            } else {
                 trash = in.nextLine(); // read bad input as string
                 System.out.println("You entered: " + trash);
                 System.out.println("Invalid input! Please enter a number.");
             }
 
-        }while(!done);
+        } while (!done);
 
         done = false; // reset for next input
 
         // get mpg
-        do
-        {
+        do {
             System.out.print("Enter fuel efficiency (miles per gallon): ");
 
-            if (in.hasNextDouble())
-            {
+            if (in.hasNextDouble()) {
                 mpg = in.nextDouble();
                 in.nextLine(); // clear the buffer
                 done = true;
-            }
-            else
-            {
+            } else {
                 trash = in.nextLine(); // read bad input as string
                 System.out.println("You entered: " + trash);
                 System.out.println("Invalid input! Please enter a number.");
             }
 
-        }while(!done);
+        } while (!done);
 
         done = false; // reset for next input
 
         // get price per gallon
-        do
-        {
+        do {
             System.out.print("Enter price of gas per gallon: ");
 
-            if (in.hasNextDouble())
-            {
+            if (in.hasNextDouble()) {
                 pricePerGallon = in.nextDouble();
                 in.nextLine(); // clear the buffer
                 done = true;
-            }
-            else
-            {
+            } else {
                 trash = in.nextLine(); // read bad input as string
                 System.out.println("You entered: " + trash);
                 System.out.println("Invalid input! Please enter a number.");
             }
 
-        }while(!done);
+        } while (!done);
 
         // calculations
         double costPer100Miles = (100.0 / mpg) * pricePerGallon; // cost = (miles / mpg) * price
