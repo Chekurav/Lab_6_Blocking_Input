@@ -11,7 +11,8 @@ public class FuelCosts {
         boolean done = false;
 
         // get gallons
-        do {
+        do 
+        {
             System.out.print("Enter gallons of gas in tank: ");
 
             if (in.hasNextDouble()) {
